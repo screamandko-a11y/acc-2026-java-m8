@@ -5,6 +5,11 @@ DELETE FROM students;
 DELETE FROM courses;
 
 -- TODO 1:
+INSERT INTO courses (course_id, course_name, credits)
+VALUES
+    (1, 'Java', 5),
+    (2, 'Databases', 4),
+    (3, 'Web Development', 3);
 -- Insert 3 courses.
 -- Remember:
 -- course_id is a number.
@@ -15,6 +20,13 @@ DELETE FROM courses;
 
 
 -- TODO 2:
+INSERT INTO students (id, name, email, age, course_id)
+VALUES
+    (1, 'Mark', 'mark@gmail.com', 18, 1),
+    (2, 'Arthur', 'arthur@gmail.com', 22, 1),
+    (3, 'Alex', 'alex@gmail.com', 20, 1),
+    (4, 'Janis', 'janis@gmail.com', 21, 2),
+    (5, 'Maria', 'maria@gmail.com', 25, 2);
 -- Insert 5 students.
 -- Remember:
 -- id is a number.

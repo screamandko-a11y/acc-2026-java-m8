@@ -2,7 +2,7 @@ PRAGMA foreign_keys = ON;
 
 -- TODO 1:
 -- Select all courses.
-       SELECT  * FROMC courses;
+       SELECT * FROM courses;
 
 
 
@@ -33,10 +33,10 @@ PRAGMA foreign_keys = ON;
 -- TODO 5:
 
     SELECT courses.course_id, courses.course_name,
-           COUNT(students.id), courses.course_name,
+           COUNT(students.id) AS student_count
 
     FROM courses
-    LEFT JOIN students ON course.course_id = studens.course_id
+    LEFT JOIN students ON courses.course_id = students.course_id
     GROUP BY courses.course_id, courses.course_name
     ORDER BY courses.course_id;
 -- Count how many students are in each course.
@@ -46,6 +46,12 @@ PRAGMA foreign_keys = ON;
 
 
 -- TODO 6:
+    UPDATE  students
+    SET age = 19
+    WHERE id =1;
+
+SELECT * FROM students
+WHERE id =1;
 
 -- Update the first student's age.
 -- Then select that student to check the update.

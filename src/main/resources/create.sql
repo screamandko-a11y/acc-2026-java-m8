@@ -27,13 +27,8 @@ CREATE TABLE students (
     course_id INTEGER NOT NULL,
     FOREIGN KEY (course_id) references  courses(course_id)
 );
-INSERT INTO students (id, name, email, age, course_id)
-VALUES
-    (001, Mark, mark@gmail.com, 18,1),
-    (002, Arthur, arthur@gmail.com, 22, 1),
-    (003,Alex, alex@gmail.com, 20, 1),
-    (004, Janis, janis@gmail.com, 21, 2),
-    (005, Maria, maria@gmail.com, 25, 2);
+
+
 -- Create the students table.
 -- It must contain:
 -- id        INTEGER primary key
