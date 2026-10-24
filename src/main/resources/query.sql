@@ -60,6 +60,15 @@ WHERE id =1;
 
 
 -- TODO 7:
+    UPDATE students
+    SET course_id = 2
+
+    WHERE id = 2;
+
+
+select students.name, courses.course_name
+from students
+join courses ON students.course_id = courses.course_id
 -- Move the second student to a different course.
 -- Then check the update using JOIN to show the new course name.
 
