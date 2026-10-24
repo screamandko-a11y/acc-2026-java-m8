@@ -2,21 +2,28 @@ PRAGMA foreign_keys = ON;
 
 -- TODO 1:
 -- Select all courses.
+       SELECT  * FROMC courses;
 
 
 
 -- TODO 2:
 -- Select all students.
+    SELECT * FROM students;
 
 
 
 -- TODO 3:
 -- Select students older than 20.
 -- Hint: use WHERE.
+    SELECT  * FROM students
+    WHERE age > 20;
 
 
 
 -- TODO 4:
+    SELECT students.name, students.email, students.age, courses.course_name
+    FROM students
+    JOIN courses ON students.course_id = courses.course_id;
 -- Show student names together with course names.
 -- Show: student name, email, age and course name.
 -- Hint: use JOIN ... ON students.course_id = courses.course_id
@@ -24,6 +31,14 @@ PRAGMA foreign_keys = ON;
 
 
 -- TODO 5:
+
+    SELECT courses.course_id, courses.course_name,
+           COUNT(students.id), courses.course_name,
+
+    FROM courses
+    LEFT JOIN students ON course.course_id = studens.course_id
+    GROUP BY courses.course_id, courses.course_name
+    ORDER BY courses.course_id;
 -- Count how many students are in each course.
 -- Courses with 0 students should also be shown.
 -- Hint: use COUNT, LEFT JOIN and GROUP BY.
@@ -31,6 +46,7 @@ PRAGMA foreign_keys = ON;
 
 
 -- TODO 6:
+
 -- Update the first student's age.
 -- Then select that student to check the update.
 -- Hint: use UPDATE ... SET ... WHERE ...
