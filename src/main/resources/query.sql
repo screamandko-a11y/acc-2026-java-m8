@@ -5,7 +5,7 @@ select * from courses;
 
 
 -- Select all students.
-select * from courses;
+select * from students;
 
 
 -- Select students older than 20.

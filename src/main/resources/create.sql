@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS courses;
 create table courses (
 course_id integer primary key,
 course_name text not null,
-credits integer check credits > 0 ));
+credits integer check ( credits >  0 ));
 
 -- Create the courses table.
 -- It must contain:
@@ -23,7 +23,7 @@ CREATE TABLE students (
 id integer primary key,
 name text not null,
 email text not null unique,
-age integer check age >= 18),
+age integer check (age >= 18),
 course_id integer not null,
 foreign key (course_id) references  courses(course_id));
 
