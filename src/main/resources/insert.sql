@@ -4,12 +4,12 @@ PRAGMA foreign_keys = ON;
 DELETE FROM students;
 DELETE FROM courses;
 
--- TODO 1:
-INSERT INTO courses (course_id, course_name, credits)
-VALUES
+insert into courses (course_id, course_name, credits)
+values
     (1, 'Java', 5),
     (2, 'Databases', 4),
     (3, 'Web Development', 3);
+
 -- Insert 3 courses.
 -- Remember:
 -- course_id is a number.
@@ -18,10 +18,8 @@ VALUES
 -- Hint: INSERT INTO table (columns) VALUES (row 1), (row 2), ...
 
 
-
--- TODO 2:
-INSERT INTO students (id, name, email, age, course_id)
-VALUES
+insert into students (id, name, email, age, course_id)
+values
     (1, 'Mark', 'mark@gmail.com', 18, 1),
     (2, 'Arthur', 'arthur@gmail.com', 22, 1),
     (3, 'Alex', 'alex@gmail.com', 20, 1),
@@ -37,8 +35,8 @@ VALUES
 
 
 
--- TODO 3:
+
 -- Uncomment this to test a foreign key error.
 -- This should fail because course_id 999 does not exist.
--- INSERT INTO students (id, name, email, age, course_id)
--- VALUES (6, 'Invalid Course Student', 'invalid@example.com', 20, 999);
+--INSERT INTO students (id, name, email, age, course_id)
+--VALUES (6, 'Invalid Course Student', 'invalid@example.com', 20, 999);

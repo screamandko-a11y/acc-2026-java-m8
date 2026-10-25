@@ -4,11 +4,12 @@ PRAGMA foreign_keys = ON;
 DROP TABLE IF EXISTS students;
 DROP TABLE IF EXISTS courses;
 
--- TODO 1:
-CREATE TABLE courses (
-    course_id INTEGER PRIMARY KEY,
-    course_name TEXT NOT NULL,
-credits INTEGER CHECK ( credits > 0 ));
+
+create table courses (
+course_id integer primary key,
+course_name text not null,
+credits integer check credits > 0 ));
+
 -- Create the courses table.
 -- It must contain:
 -- course_id   INTEGER primary key
@@ -18,16 +19,13 @@ credits INTEGER CHECK ( credits > 0 ));
 
 
 
--- TODO 2:
 CREATE TABLE students (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    email TEXT NOT NULL UNIQUE,
-    age INTEGER CHECK ( age >= 18),
-    course_id INTEGER NOT NULL,
-    FOREIGN KEY (course_id) references  courses(course_id)
-);
-
+id integer primary key,
+name text not null,
+email text not null unique,
+age integer check age >= 18),
+course_id integer not null,
+foreign key (course_id) references  courses(course_id));
 
 -- Create the students table.
 -- It must contain:
