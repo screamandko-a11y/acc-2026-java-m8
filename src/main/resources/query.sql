@@ -60,27 +60,39 @@ WHERE id =1;
 
 
 -- TODO 7:
-    UPDATE students
-    SET course_id = 2
 
-    WHERE id = 2;
-
-
+update students
+set course_id = 2
+where id = 2;
 select students.name, courses.course_name
 from students
-join courses ON students.course_id = courses.course_id
+join courses ON students.course_id = courses.course_id;
 -- Move the second student to a different course.
 -- Then check the update using JOIN to show the new course name.
 
 
 
 -- TODO 8:
+
+delete from  students
+where id = 5;
+
+
 -- Delete one student.
 -- Hint: do not forget the WHERE clause, or every student will be deleted!
 
 
 
 -- TODO 9:
+    select students.id,
+           students.name,
+           students.email,
+           students.age,
+           courses.course_name
+
+    from students
+    join courses ON students.course_id = courses.course_id
+    order by students.id;
 -- Check the final result.
 -- Show id, name, email, age and course name for every student, ordered by id.
 -- Hint: use JOIN and ORDER BY.
